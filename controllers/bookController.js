@@ -15,11 +15,27 @@ const addBook = async (req, res) => {
     res.status(200).send(book)
   
 }
+const postBook = async (req, res) => {
+
+    let postData = req.body;
+
+if(postData.length>1){
+    var book = await Book.bulkCreate(postData)    // multipal  data insert
+}else{
+    var book = await Book.create(postData)
+}
+    res.status(200).send(book)
+  
+}
+
+
+
+
 
 const getAllBook = async (req, res) => {
 
-    let products = await Book.findAll({ where: { purchased: true }})
-    res.status(200).send(products)
+    let products = await Book.findAll({})
+    res.status(200).send({products:products})
 
 }
 
@@ -49,4 +65,4 @@ const deleteBook = async (req, res) => {
 
 
 
-module.exports = { addBook , getAllBook , updateBook , deleteBook}
+module.exports = { addBook , getAllBook , updateBook , deleteBook , postBook}

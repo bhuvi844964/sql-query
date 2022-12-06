@@ -9,6 +9,7 @@ const router = require('express').Router()
 
 
 router.post('/addBook', bookController.addBook)
+router.post('/postBook', bookController.postBook)
 router.get('/allBook', bookController.getAllBook)
 router.put('/update/:id', bookController.updateBook)
 router.delete('/delete/:id', bookController.deleteBook)

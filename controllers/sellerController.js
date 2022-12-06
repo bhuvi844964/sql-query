@@ -21,7 +21,7 @@ const addSeller = async (req, res) => {
 const getAllSeller = async (req, res) => {
 
     const reviews = await Seller.findAll({})
-    res.status(200).send(reviews)
+    res.status(200).send({reviews:reviews})
 
 }
 

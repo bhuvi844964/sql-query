@@ -1,7 +1,7 @@
 const express = require('express')
 const router = require('./routes/productRouter.js')
 const app = express()
-
+require('./models')
 
 
 app.use(express.json())

@@ -23,11 +23,10 @@ const addCustomer = async (req, res) => {
 
 
 const getAllCustomer = async (req, res) => {
-
     const reviews = await Customer.findAll({})
-    res.status(200).send(reviews)
+    res.status(200).send({reviews:reviews})
 }
-
+ 
 
 
 const updateCustomer = async (req, res) => {
