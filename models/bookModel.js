@@ -8,7 +8,8 @@ module.exports =  (sequelize, DataTypes)=>{
         },
         author: {
           type: DataTypes.STRING,
-          allowNull: false
+          allowNull: false,
+          defaultValue: "Bhuvnesh Sharma"
         },
         price: {
             type: DataTypes.INTEGER
@@ -17,7 +18,7 @@ module.exports =  (sequelize, DataTypes)=>{
           type: DataTypes.DATEONLY,
         }
        
-     } , {timestamps: true}
+     } , {timestamps: false}
      );
     
      return Book 

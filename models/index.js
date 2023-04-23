@@ -2,7 +2,7 @@
 const {Sequelize, DataTypes} = require('sequelize');
 
 const sequelize = new Sequelize(
-    'bhuvi',
+    'bhuvidb',
     'root',
     '12345', {
   
@@ -17,7 +17,7 @@ sequelize.authenticate()
     console.log('connected..')
 })
 .catch(err => {
-    console.log('Error'+ err)
+    console.log('Error'+ err) 
 })
 
 const db = {}

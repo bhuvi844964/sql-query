@@ -1,7 +1,7 @@
 const express = require('express')
 const router = require('./routes/productRouter.js')
 const app = express()
-require('./models')
+require('./models/index.js')
 
 
 app.use(express.json())
@@ -12,8 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/', router)
 
 
-
-const PORT =  8080
+const PORT =  3000
 
 
 app.listen(PORT, () => {
