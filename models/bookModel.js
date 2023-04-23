@@ -17,7 +17,8 @@ module.exports =  (sequelize, DataTypes)=>{
           type: DataTypes.DATEONLY,
         }
        
-     });
+     } , {timestamps: true}
+     );
     
-     return Book
+     return Book 
     }
