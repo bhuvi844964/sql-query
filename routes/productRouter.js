@@ -1,6 +1,7 @@
 const bookController = require("../controllers/bookController")
 const customerController = require("../controllers/customerController")
 const sellerController = require("../controllers/sellerController")
+const sqlQuery = require("../controllers/sqlQuery")
 
 // router
 const router = require('express').Router()
@@ -10,11 +11,11 @@ const router = require('express').Router()
 
 router.post('/addBook', bookController.addBook)
 router.post('/postBook', bookController.postBook)
-router.get('/allBook', bookController.getAllBook)
 router.get('/getAllBookById/:id', bookController.getAllBookById)
 router.put('/update/:id', bookController.updateBook)
 router.delete('/delete/:id', bookController.deleteBook)
 
+router.get('/getAllQuery', sqlQuery.getAllQuery)
 
 
 // customer api 
