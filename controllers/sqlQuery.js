@@ -15,7 +15,7 @@ module.exports.getAllQuery = async (req, res) => {
         //     ]
         //   }
         where: {
-            id: {
+            id: { 
                 [Op.eq]: 8,  
             }
         }
