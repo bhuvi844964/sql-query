@@ -4,7 +4,7 @@ const {Sequelize, DataTypes} = require('sequelize');
 const sequelize = new Sequelize(
     'bhuvidb',
     'root',
-    '12345', {
+    '12345', {  
   
         dialect: 'mysql',
         logging:false,  // message not show   
@@ -14,7 +14,7 @@ const sequelize = new Sequelize(
 
 sequelize.authenticate()
 .then(() => {
-    console.log('connected..')
+    console.log('connected..') 
 })
 .catch(err => {
     console.log('Error'+ err) 
