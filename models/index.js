@@ -10,7 +10,7 @@ const sequelize = new Sequelize(
         logging:false,  // message not show   
         host: 'localhost'
     }
-)
+)                          
 
 sequelize.authenticate()
 .then(() => {
