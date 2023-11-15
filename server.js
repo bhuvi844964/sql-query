@@ -3,7 +3,7 @@ const router = require('./routes/productRouter.js')
 const app = express()
 require('./models/index.js')
 
-
+// server
 app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
